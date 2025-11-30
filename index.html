@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses - Past Questions</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 All Courses - Past Questions</h1>
+            <p>Test your knowledge and prepare for success</p>
+        </div>
+
+        <div class="timer-section">
+            <div>Time Remaining</div>
+            <div class="timer" id="timer">1:40:00</div>
+        </div>
+
+        <div class="content">
+            <!-- Start Screen -->
+            <div class="start-screen active" id="startScreen">
+                <div class="start-info">
+                    <h2>📋 Exam Instructions</h2>
+                    <ul>
+                        <li><strong>Duration:</strong>1 hour,40 minutes</li>
+                        <li><strong>Total Questions:</strong> 15 questions</li>
+                        <li><strong>Question Types:</strong> MCQ, Fill in the Gap</li>
+                        <li><strong>Passing Score:</strong> 50%</li>
+                        <li>You can submit your exam at any time before the timer runs out</li>
+                        <li>Once submitted, you cannot change your answers</li>
+                        <li>Make sure to answer all questions before submitting</li>
+                    </ul>
+                </div>
+                <center>
+                    <button class="btn" onclick="startExam()">Start Exam</button>
+                </center>
+            </div>
+
+            <!-- Exam Screen -->
+            <div class="exam-screen" id="examScreen">
+                <div class="progress" id="progress"></div>
+                <div id="questionsContainer"></div>
+                <div class="navigation">
+                    <button class="btn" onclick="submitExam()">Submit Exam</button>
+                </div>
+            </div>
+
+            <!-- Result Screen -->
+            <div class="result-screen" id="resultScreen">
+                <div class="result-card">
+                    <h2>🎉 Exam Completed!</h2>
+                    <div class="score" id="scoreDisplay"></div>
+                    <div class="result-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Total Questions</div>
+                            <div class="detail-value" id="totalQuestions"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Correct Answers</div>
+                            <div class="detail-value" id="correctAnswers"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Wrong Answers</div>
+                            <div class="detail-value" id="wrongAnswers"></div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Percentage</div>
+                            <div class="detail-value" id="percentage"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-section">
+                    <h2 style="color: #1e3c72; margin-bottom: 20px;">📝 Answer Review</h2>
+                    <div id="reviewContainer"></div>
+                </div>
+
+                <center>
+                    <button class="btn" onclick="location.reload()">Take Exam Again</button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>
